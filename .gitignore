@@ -1,0 +1,24 @@
+# Virtual environments
+ingestion/venv/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Environment files
+.env
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# NOTE: raw data is currently kept in repo (data/raw/). If you prefer
+# to avoid committing raw files, add `data/raw/` here.
