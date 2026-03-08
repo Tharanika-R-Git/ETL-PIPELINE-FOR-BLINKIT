@@ -1,78 +1,123 @@
-# ETL Pipeline for Blinkit Data
+# ETL-PIPELINE-FOR-BLINKIT
 
-## 📌 Project Overview
+## 📌 Introduction
 
-This project implements an **ETL (Extract, Transform, Load) pipeline** to collect and process product data from Blinkit APIs.
-The pipeline extracts data from APIs, transforms it into a structured format, and loads it into a database for analysis.
+**ETL-PIPELINE-FOR-BLINKIT** is a robust ETL (Extract, Transform, Load) pipeline designed to automate the collection and processing of product data from Blinkit's APIs. This pipeline streamlines the extraction of data, transformation into structured formats, and loading into a database for seamless analysis and reporting. The project is modular, with dedicated scripts for each stage, ensuring scalability and maintainability.
 
-## ⚙️ Tech Stack
+---
 
-* Python
-* REST API
-* Pandas
-* MySQL / Database
-* ETL Pipeline Architecture
+## ✨ Features
 
-## 🏗️ Project Architecture
+- **Automated Data Extraction**  
+  Utilizes Playwright for robust and efficient web scraping from Blinkit APIs.
+- **Data Transformation**  
+  Cleans, deduplicates, and structures raw data for downstream analytics (using Pandas).
+- **Logging & Error Handling**  
+  Generates logs for transparency and troubleshooting.
+- **Modular Architecture**  
+  Separate scripts for ingestion and transformation for easy extensibility.
+- **Directory Structure**  
+  Organized into `ingestion/`, `transform/`, `data/`, and `logs/` folders.
 
-The project follows a standard **ETL workflow**:
+---
 
-1. **Extract**
+## ⚙️ Installation
 
-   * Fetch data from Blinkit APIs
-   * Store raw data
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/ETL-PIPELINE-FOR-BLINKIT.git
+   cd ETL-PIPELINE-FOR-BLINKIT
+   ```
 
-2. **Transform**
+2. **Create a virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate     # On Linux/Mac
+   venv\Scripts\activate        # On Windows
+   ```
 
-   * Clean and preprocess data
-   * Convert into structured format
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+   > **Note**: This project uses `playwright` and `pandas`. Install Playwright's browser binaries as well:
+   ```bash
+   playwright install
+   ```
 
-3. **Load**
+---
 
-   * Insert processed data into database
+## 🚀 Usage
 
-## 📂 Project Structure
+1. **Run Data Ingestion (Extraction)**
+   ```bash
+   python ingestion/scraper.py
+   ```
+   - Scrapes product data from Blinkit and stores it in `data/raw/`.
+   - Logs the process in `logs/`.
+
+2. **Run Data Transformation**
+   ```bash
+   python transform/transformation.py
+   ```
+   - Loads the latest raw data file, cleans it, removes duplicates, and prepares for loading.
+
+3. **(Optional) Load into Database**
+   - Extend the pipeline by adding a `load` module to insert data into your preferred database.
+
+---
+
+## 🏗️ Project Structure
 
 ```
-ETL-PIPELINE-FOR-BLINKIT
+ETL-PIPELINE-FOR-BLINKIT/
 │
-├── Extract/
-├── Transform/
-├── Load/
-├── main.py
-└── README.md
+├── ingestion/
+│   └── scraper.py           # Extracts data from Blinkit APIs
+│
+├── transform/
+│   └── transformation.py    # Transforms and cleans the extracted data
+│
+├── data/
+│   └── raw/                 # Stores raw scraped data
+│
+├── logs/                    # Logs for monitoring and debugging
+│
+├── README.md
+└── requirements.txt
 ```
 
-## ▶️ How to Run the Project
+---
 
-1. Clone the repository
+## 🤝 Contributing
 
-```
-git clone https://github.com/Tharanika-R-Git/ETL-PIPELINE-FOR-BLINKIT.git
-```
+Contributions are welcome! Please follow these steps:
 
-2. Install dependencies
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Create a Pull Request.
 
-```
-pip install -r requirements.txt
-```
+Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
-3. Run the pipeline
+---
 
-```
-python main.py
-```
+## 📄 License
 
-## 🎯 Features
+This project is licensed under the [MIT License](LICENSE).  
+Feel free to use, modify, and distribute as per the license terms.
 
-* Automated data extraction from APIs
-* Data cleaning and transformation
-* Database storage for further analysis
-* Modular ETL architecture
+---
 
-## 📈 Future Improvements
+> ⭐ **If you find this project useful, please star the repository!**
 
-* Add scheduling using Airflow or Cron
-* Improve data validation
-* Add dashboard for analytics
+---
 
+**Developed with ❤️ for data engineering and analytics.**
+
+## License
+This project is licensed under the **MIT** License.
+
+---
+🔗 GitHub Repo: https://github.com/Tharanika-R-Git/ETL-PIPELINE-FOR-BLINKIT
