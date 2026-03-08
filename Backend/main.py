@@ -22,6 +22,7 @@ app.add_middleware(
 # -----------------------------
 # Root route to avoid 404
 # -----------------------------
+@app.get("/")  
 @app.post("/")
 def root():
     return {"message": "Blinkit Products API is running!"}
