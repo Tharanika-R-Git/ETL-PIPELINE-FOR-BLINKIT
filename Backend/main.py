@@ -98,6 +98,6 @@ def get_latest_products(limit: int = 10):
     import os
 import uvicorn
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     uvicorn.run("main:app", host="0.0.0.0", port=port)
