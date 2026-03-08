@@ -95,3 +95,9 @@ def get_top_products(limit: int = 10):
 def get_latest_products(limit: int = 10):
     query = "SELECT * FROM products ORDER BY timestamp DESC LIMIT ?"
     return query_db(query, (limit,))
+    import os
+import uvicorn
+
+if _name_ == "_main_":
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
