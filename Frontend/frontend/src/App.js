@@ -1,3 +1,4 @@
+import './chartSetup.js';
 import React, { useEffect, useState } from "react";
 import { fetchProducts } from "./api";
 import ProductsTable from "./components/ProductsTable";

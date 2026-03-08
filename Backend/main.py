@@ -14,7 +14,7 @@ app = FastAPI(title="Blinkit Products API")
 # Allow frontend (React) to access APIs
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # change to your frontend URL in production
+    allow_origins=["*"],   # change to your frontend URL in production
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -31,20 +31,21 @@ def root():
 # -----------------------------
 class Product(BaseModel):
     id: int
-    collection: str
+    collection: Optional[str] = None
     product_name: str
-    category: str
+    category: Optional[str] = None
     sub_category: str
     price: Optional[float] = None
     rating: Optional[float] = None
     timestamp: Optional[str] = None
-
 # -----------------------------
 # Database path
 # -----------------------------
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-DB_PATH = os.path.join(project_root, "database", "products.db")
+DB_PATH = os.path.join(os.path.dirname(__file__), "database", "products.db")
 
+# Optional: check if DB exists
+if not os.path.exists(DB_PATH):
+    raise FileNotFoundError(f"Database file not found at: {DB_PATH}")
 # -----------------------------
 # Helper function to query DB
 # -----------------------------
@@ -64,7 +65,7 @@ def query_db(query: str, params=()):
 # Get all products (limit optional)
 @app.get("/products", response_model=List[Product])
 def get_products(limit: int = 100):
-    query = "SELECT * FROM products ORDER BY timestamp DESC LIMIT ?"
+    query = "SELECT * FROM products LIMIT ?"
     return query_db(query, (limit,))
 
 # Get product by ID
