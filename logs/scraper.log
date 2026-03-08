@@ -2,3 +2,14 @@
 2026-02-11 23:46:19.345077 - Error processing response: Response.json: Protocol error (Network.getResponseBody): No resource with given identifier found
 2026-02-11 23:46:19.346079 - Error processing response: Response.json: Protocol error (Network.getResponseBody): No resource with given identifier found
 2026-02-11 23:46:59.185143 - Successfully saved 1362 products.
+2026-03-07 22:55:55.316551 - Error processing response: Expecting value: line 1 column 1 (char 0)
+2026-03-07 22:57:03.742850 - Error processing response: Response.json: Protocol error (Network.getResponseBody): No resource with given identifier found
+2026-03-07 22:57:03.746252 - Error processing response: Response.json: Protocol error (Network.getResponseBody): No resource with given identifier found
+2026-03-07 22:57:03.749627 - Error processing response: Response.json: Protocol error (Network.getResponseBody): No resource with given identifier found
+2026-03-07 22:57:03.752257 - Error processing response: Response.json: Protocol error (Network.getResponseBody): No resource with given identifier found
+2026-03-07 22:57:03.754778 - Error processing response: Response.json: Protocol error (Network.getResponseBody): No resource with given identifier found
+2026-03-07 22:57:03.756979 - Error processing response: Response.json: Protocol error (Network.getResponseBody): No resource with given identifier found
+2026-03-07 22:57:03.760898 - Error processing response: Response.json: Protocol error (Network.getResponseBody): No resource with given identifier found
+2026-03-07 22:57:42.234246 - Successfully saved 1353 products.
+2026-03-07 23:26:07.867945 - Error processing response: Expecting value: line 1 column 1 (char 0)
+2026-03-07 23:26:55.395526 - Saved 187 products
