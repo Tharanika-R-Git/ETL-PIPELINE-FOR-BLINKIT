@@ -1,4 +1,4 @@
-```markdown
+
 # 🚀 ETL-PIPELINE-FOR-BLINKIT
 
 A robust ETL (Extract, Transform, Load) pipeline project designed for Blinkit, featuring a FastAPI backend with SQLite database integration and a React.js frontend for data visualization and management.
@@ -121,7 +121,7 @@ This project is licensed under the [MIT License](LICENSE).
 > For questions, suggestions, or support, please open an issue or contact the maintainers.
 
 ---
-```
+
 
 
 ## License
